@@ -1,0 +1,209 @@
+/* Variables */
+:root {
+  --primary-color: #1890ff;
+  --secondary-color: #f0f2f5;
+  --text-color: #333;
+  --light-text: #777;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+/* Page Container */
+.profile-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tabs */
+.profile-tabs .ant-tabs-nav {
+  margin: 0;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.profile-tabs .ant-tabs-tab {
+  padding: 12px 24px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.profile-tabs .ant-tabs-tab:hover {
+  color: var(--primary-color);
+}
+
+.profile-tabs .ant-tabs-tab-active {
+  color: var(--primary-color);
+}
+
+.profile-tabs .ant-tabs-ink-bar {
+  background: var(--primary-color);
+  height: 3px;
+}
+
+/* Cards */
+.profile-card, .orders-card, .wishlist-card {
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: none;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.profile-card:hover, .orders-card:hover, .wishlist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card .ant-card-head {
+  border-bottom: none;
+  padding: 1.5rem;
+  background: var(--secondary-color);
+}
+
+.profile-card .ant-card-body {
+  padding: 2rem;
+}
+
+/* Avatar Section */
+.avatar-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  font-size: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--secondary-color);
+  border: 3px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+}
+
+.avatar-upload-btn {
+  margin-top: 1rem;
+  border-radius: 20px;
+  padding: 0 1.5rem;
+  height: 40px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.avatar-upload-btn:hover {
+  background: var(--primary-color);
+  color: white;
+}
+
+/* Form */
+.profile-form .ant-form-item-label > label {
+  color: var(--light-text);
+  font-weight: 500;
+}
+
+.profile-form .ant-input {
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+  border: 1px solid #e0e0e0;
+}
+
+.profile-form .ant-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.profile-form .ant-btn-primary {
+  width: 100%;
+  height: 45px;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  background: var(--primary-color);
+  border: none;
+  transition: var(--transition);
+}
+
+.profile-form .ant-btn-primary:hover {
+  background: #40a9ff;
+  transform: translateY(-2px);
+}
+
+/* Empty States */
+.empty-orders, .empty-wishlist {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.empty-icon {
+  font-size: 64px;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+}
+
+.empty-orders p, .empty-wishlist p {
+  font-size: 1.1rem;
+  color: var(--light-text);
+  margin-bottom: 2rem;
+}
+
+.empty-orders .ant-btn, .empty-wishlist .ant-btn {
+  padding: 0 2rem;
+  height: 45px;
+  border-radius: 25px;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-page {
+    padding: 0 1rem;
+  }
+  
+  .profile-card .ant-card-body {
+    padding: 1.5rem;
+  }
+  
+  .profile-avatar {
+    width: 120px;
+    height: 120px;
+    font-size: 48px;
+  }
+  
+  .empty-orders, .empty-wishlist {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-tabs .ant-tabs-tab {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .profile-form .ant-form-item-label > label {
+    font-size: 0.9rem;
+  }
+}

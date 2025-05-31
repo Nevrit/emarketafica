@@ -1,0 +1,111 @@
+/* OrderHistory.css */
+.order-history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  
+  .page-title {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .orders-table {
+    margin-top: 16px;
+  }
+  
+  .receipt-container {
+    padding: 16px;
+    background: #fff;
+  }
+  
+  .receipt-header {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .receipt-info {
+    margin-bottom: 16px;
+  }
+  
+  .receipt-items .ant-list-item {
+    padding: 12px 0;
+  }
+  
+  .receipt-items .ant-list-item-meta {
+    align-items: center;
+  }
+  
+  .receipt-summary {
+    margin: 24px 0;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .summary-row.total {
+    font-size: 16px;
+    margin-top: 16px;
+  }
+  
+  .summary-divider {
+    margin: 12px 0 !important;
+  }
+  
+  .receipt-footer {
+    margin-top: 24px;
+  }
+  
+  .receipt-footer div {
+    margin-bottom: 12px;
+  }
+  
+  .thank-you {
+    text-align: center;
+    margin-top: 24px;
+    font-style: italic;
+  }
+  
+  @media print {
+    .order-history-container {
+      padding: 0;
+    }
+    
+    .ant-modal-footer {
+      display: none !important;
+    }
+    
+    .ant-modal-header {
+      border-bottom: none !important;
+    }
+    
+    .ant-modal-title {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .order-history-container {
+      padding: 16px;
+    }
+    
+    .receipt-info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .receipt-items .ant-list-item {
+      flex-direction: column;
+      align-items: flex-start !important;
+    }
+    
+    .receipt-items .ant-list-item-meta {
+      margin-bottom: 8px;
+    }
+  }

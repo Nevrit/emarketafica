@@ -1,0 +1,210 @@
+/* Auth.css - Styles pour les composants d'authentification */
+
+/* Variables de couleurs et de styles */
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+    --secondary-color: #6366f1;
+    --accent-color: #a5b4fc;
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    --background-color: #f3f4f6;
+    --card-bg-color: #ffffff;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --text-light: #9ca3af;
+    --border-color: #e5e7eb;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+  }
+  
+  /* Container principal */
+  .auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+    background-color: var(--background-color);
+    background-image: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(99, 102, 241, 0.1) 100%);
+  }
+  
+  /* Carte d'authentification */
+  .auth-card {
+    width: 100%;
+    max-width: 450px;
+    padding: 2.5rem;
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+  }
+  
+  .auth-card:hover {
+    box-shadow: 0 15px 20px -3px rgba(0, 0, 0, 0.12), 0 6px 8px -2px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* En-tête du formulaire */
+  .auth-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .auth-header h1 {
+    margin-bottom: 0.75rem;
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+  
+  .auth-header p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+  }
+  
+  /* Styles du formulaire */
+  .auth-form {
+    width: 100%;
+  }
+  
+  .auth-form .ant-form-item-label > label {
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 0.9375rem;
+  }
+  
+  .auth-input {
+    height: 3rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+  }
+  
+  .auth-input:hover, 
+  .auth-input:focus {
+    border-color: var(--primary-color);
+  }
+  
+  .auth-input::placeholder {
+    color: var(--text-light);
+  }
+  
+  /* Bouton de soumission */
+  .auth-button {
+    width: 100%;
+    height: 3rem;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+  }
+  
+  .auth-button:hover, 
+  .auth-button:focus {
+    background-color: var(--primary-hover);
+  }
+  
+  /* Options supplémentaires */
+  .auth-additional-options {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+  }
+  
+  .forgot-password {
+    color: var(--primary-color);
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  .forgot-password:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+  }
+  
+  /* Redirection */
+  .auth-redirect {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .auth-redirect p {
+    color: var(--text-secondary);
+    font-size: 0.9375rem;
+  }
+  
+  .auth-redirect a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  .auth-redirect a:hover {
+    color: var(--primary-hover);
+    text-decoration: underline;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .auth-card {
+      padding: 1.75rem;
+    }
+    
+    .auth-header h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .auth-container {
+    animation: fadeIn 0.4s ease-out;
+  }
+  
+  /* Customisation des composants Ant Design */
+  .auth-form .ant-form-item-explain-error {
+    color: var(--error-color);
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+  }
+  
+  .auth-form .ant-form-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Icône d'oeil pour le mot de passe */
+  .auth-form .ant-input-password-icon {
+    color: var(--text-light);
+  }
+  
+  .auth-form .ant-input-password-icon:hover {
+    color: var(--primary-color);
+  }
+  
+  /* Message de succès/erreur */
+  .ant-message-success .ant-message-custom-content {
+    color: var(--success-color);
+  }
+  
+  .ant-message-error .ant-message-custom-content {
+    color: var(--error-color);
+  }

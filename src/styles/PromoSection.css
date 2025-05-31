@@ -1,0 +1,304 @@
+/* Section principale */
+.promo-section {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+    background: linear-gradient(to right, #4338ca, #6366f1);
+  }
+  
+  /* Formes décoratives */
+  .decorative-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .decorative-shape {
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .shape-1 {
+    top: -40px;
+    left: -40px;
+    width: 160px;
+    height: 160px;
+  }
+  
+  .shape-2 {
+    top: 80px;
+    right: 40px;
+    width: 240px;
+    height: 240px;
+  }
+  
+  .shape-3 {
+    bottom: -80px;
+    left: 50%;
+    width: 320px;
+    height: 320px;
+    transform: translateX(-50%);
+  }
+  
+  /* Container principal */
+  .promo-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  .promo-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  
+  @media (min-width: 1024px) {
+    .promo-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Partie textuelle */
+  .promo-content {
+    color: white;
+  }
+  
+  .promo-badge {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 4px 16px;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  
+  .promo-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    line-height: 1.2;
+  }
+  
+  @media (min-width: 768px) {
+    .promo-title {
+      font-size: 3rem;
+    }
+  }
+  
+  .highlight {
+    color: #fde047;
+  }
+  
+  .promo-description {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 32px;
+    max-width: 28rem;
+  }
+  
+  /* Compteur */
+  .countdown-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  
+  @media (min-width: 640px) {
+    .countdown-container {
+      flex-direction: row;
+    }
+  }
+  
+  .countdown-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    flex: 1;
+  }
+  
+  .countdown-value {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #fde047;
+  }
+  
+  .countdown-label {
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .view-all-offers-button {
+    background-color: white !important;
+    color: #4338ca !important;
+    font-weight: 500 !important;
+    padding: 0 32px !important;
+    height: 48px !important;
+    display: flex !important;
+    align-items: center !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+    border: none !important;
+  }
+  
+  .view-all-offers-button:hover {
+    background-color: #f9fafb !important;
+  }
+  
+  .button-arrow {
+    margin-left: 8px;
+  }
+  
+  /* Produits en promo */
+  .promo-products {
+    position: relative;
+  }
+  
+  .promo-products-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .promo-products-grid {
+      gap: 24px;
+    }
+  }
+  
+  .promo-product-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+  }
+  
+  .promo-product-card:hover {
+    transform: translateY(-8px);
+  }
+  
+  .promo-product-card.shifted {
+    margin-top: 16px;
+  }
+  
+  @media (min-width: 768px) {
+    .promo-product-card.shifted {
+      margin-top: 32px;
+    }
+  }
+  
+  /* Badge de réduction */
+  .discount-badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background-color: #ef4444;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 8px;
+    z-index: 10;
+  }
+  
+  /* Image du produit */
+  .promo-product-image-container {
+    position: relative;
+    height: 160px;
+    overflow: hidden;
+  }
+  
+  .promo-product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+  }
+  
+  .promo-product-card:hover .promo-product-image {
+    transform: scale(1.1);
+  }
+  
+  /* Indicateur temps limité */
+  .limited-time-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .time-icon {
+    margin-right: 4px;
+  }
+  
+  /* Contenu du produit */
+  .promo-product-content {
+    padding: 16px;
+  }
+  
+  .promo-product-name {
+    font-weight: 500;
+    color: #1f2937;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .promo-product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .promo-current-price {
+    color: #4338ca;
+    font-weight: 700;
+  }
+  
+  .promo-old-price {
+    font-size: 0.75rem;
+    color: #6b7280;
+    text-decoration: line-through;
+  }
+  
+  /* Bouton ajout panier */
+  .promo-cart-button {
+    width: 32px;
+    height: 32px;
+    background-color: #4338ca;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .promo-cart-button:hover {
+    background-color: #6366f1;
+  }

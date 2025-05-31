@@ -1,0 +1,149 @@
+/* OrderPage.css */
+.order-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+  }
+  
+  .empty-cart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+  }
+  
+  .empty-cart-card {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .empty-cart-icon {
+    font-size: 64px;
+    color: #1890ff;
+    margin-bottom: 16px;
+  }
+  
+  .order-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  
+  .back-button {
+    margin-right: 16px;
+  }
+  
+  .page-title {
+    margin-bottom: 0 !important;
+  }
+  
+  .order-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .products-section {
+    flex: 1;
+  }
+  
+  .summary-section {
+    width: 100%;
+  }
+  
+  .cart-table {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .product-cell {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .product-image {
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  .product-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .quantity-input {
+    width: 80px;
+  }
+  
+  .table-footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .summary-card {
+    border-radius: 8px;
+  }
+  
+  .summary-title {
+    margin-bottom: 0 !important;
+  }
+  
+  .summary-divider {
+    margin: 16px 0 !important;
+  }
+  
+  .summary-details {
+    width: 100%;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .total-row {
+    margin-top: 16px;
+  }
+  
+  .total-amount {
+    margin-bottom: 0 !important;
+    color: #1890ff;
+  }
+  
+  .checkout-button {
+    margin-top: 24px;
+    height: 48px;
+    font-weight: bold;
+  }
+  
+  .secure-payment-text {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  @media (min-width: 992px) {
+    .order-content {
+      flex-direction: row;
+    }
+    
+    .summary-section {
+      width: 350px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .product-cell {
+      flex-direction: column;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    
+    .quantity-input {
+      width: 60px;
+    }
+  }

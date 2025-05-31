@@ -1,0 +1,99 @@
+/* Conteneur principal */
+.testimonials-container {
+    background-color: #f9fafb;
+    padding: 48px 0;
+  }
+  
+  .testimonials-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  
+  /* Titre */
+  .testimonials-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  
+  /* Configuration du Swiper */
+  .testimonials-swiper {
+    padding-bottom: 48px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Animation pour l'entrée des slides */
+  .swiper-slide-active .testimonial-card {
+    animation: fadeInScale 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0.7;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  /* Styles pour chaque carte de témoignage */
+  .testimonial-card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .testimonial-rating {
+    margin-bottom: 16px;
+  }
+  
+  .testimonial-comment {
+    color: #4b5563;
+    font-style: italic;
+    flex-grow: 1;
+    margin: 0 0 16px 0;
+  }
+  
+  .testimonial-footer {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .testimonial-name {
+    font-weight: 700;
+  }
+  
+  .testimonial-role {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+  
+  /* Media queries pour la responsivité */
+  @media (max-width: 767px) {
+    .testimonials-title {
+      font-size: 1.5rem;
+    }
+    
+    .testimonial-card {
+      padding: 16px;
+    }
+  }
+  
+  /* Personnalisation des boutons de pagination du Swiper */
+  :root {
+    --swiper-pagination-color: #3b82f6;
+    --swiper-pagination-bullet-size: 10px;
+    --swiper-pagination-bullet-inactive-color: #cbd5e1;
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
+  }
